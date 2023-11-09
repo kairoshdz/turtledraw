@@ -6,6 +6,12 @@ import turtle
 
 print('TurtleDraw Starting...')
 
+TEXTFILENAME = 'TurtleDraw.txt'
+turtledrawText = open(TEXTFILENAME, 'r')
+line = turtledrawText.readline()
+while line:
+    print(line, end='')
+    line = turtledrawText.readline()
 turtle.screensize(canvwidth=450, canvheight= 450)
 #turtle.speed("fastest")
 
@@ -25,5 +31,4 @@ for i in range(20):
     spiral.forward(i * 10)
     spiral.right(144)
 
-turtle.done() 
-a
+turtle.done()
